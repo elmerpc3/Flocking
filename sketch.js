@@ -36,6 +36,14 @@ function draw() {
   // put drawing code here
   background(255);
 
+  if (mouseIsPressed == true)
+  {
+    let aux = new boid();
+    aux.position.x = mouseX;
+    aux.position.y = mouseY;
+    boids.push(aux);
+  }
+
   for(let boid of boids)
   {
     boid.boids_group(boids);
